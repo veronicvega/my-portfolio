@@ -1,13 +1,16 @@
+<template >
+  <div class="bg-[#111827] min-h-screen">
+    <navBar/>
+    <HeroSection/>
 
-
-<template>
-  <div>
-    <HeroSection />
-
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
   </div>
 </template>
-<script setup>
-import HeroSection from "@/components/HeroSection.vue";
-</script>
 
+<script setup>
+import { defineAsyncComponent } from 'vue';
+const navBar = defineAsyncComponent(() => import('@components/NavBar.vue'));
+const HeroSection = defineAsyncComponent(() => import('@components/HeroSection.vue'));
+
+
+
+</script>
